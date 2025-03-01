@@ -1,5 +1,4 @@
-package com.example.UC3_AddressBookAppSetup;
-
+package com.example.UC4_AddressBookAppSetup;
 
 public class AddressBookDTO {
     private String name;

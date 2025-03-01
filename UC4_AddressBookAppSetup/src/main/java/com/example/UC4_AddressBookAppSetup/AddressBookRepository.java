@@ -1,4 +1,4 @@
-package com.example.UC3_AddressBookAppSetup;
+package com.example.UC4_AddressBookAppSetup;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -6,4 +6,3 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AddressBookRepository extends JpaRepository<AddressBook, Long> {
 }
-

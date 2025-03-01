@@ -1,4 +1,4 @@
-package com.example.UC3_AddressBookAppSetup;
+package com.example.UC4_AddressBookAppSetup;
 
 import jakarta.persistence.*;
 
@@ -56,4 +56,3 @@ public class AddressBook {
         this.address = address;
     }
 }
-
