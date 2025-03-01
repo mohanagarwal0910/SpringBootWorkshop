@@ -1,10 +1,10 @@
-package com.example.UC1_AddressBookAppSetup;
+package com.example.UC2_AddressBookAppSetup;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Uc1AddressBookAppSetupApplicationTests {
+class Uc2AddressBookAppSetupApplicationTests {
 
 	@Test
 	void contextLoads() {

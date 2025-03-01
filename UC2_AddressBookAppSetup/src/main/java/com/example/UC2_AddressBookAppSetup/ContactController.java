@@ -1,4 +1,4 @@
-package com.example.UC1_AddressBookAppSetup;
+package com.example.UC2_AddressBookAppSetup;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,32 +9,32 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/contacts")
-public class AddressBookController {
+public class ContactController {
 
     @Autowired
-    private AddressBookService service;
+    private ContactService service;
 
     @GetMapping
-    public List<AddressBookEntry> getAllContacts() {
-        return service.getAllContacts();
+    public ResponseEntity<List<Contact>> getAllContacts() {
+        return ResponseEntity.ok(service.getAllContacts());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AddressBookEntry> getContact(@PathVariable Long id) {
-        Optional<AddressBookEntry> contact = service.getContactById(id);
+    public ResponseEntity<Contact> getContactById(@PathVariable Long id) {
+        Optional<Contact> contact = service.getContactById(id);
         return contact.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public AddressBookEntry addContact(@RequestBody AddressBookEntry contact) {
-        return service.addContact(contact);
+    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
+        return ResponseEntity.ok(service.saveContact(contact));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AddressBookEntry> updateContact(@PathVariable Long id, @RequestBody AddressBookEntry newContact) {
-        Optional<AddressBookEntry> updatedContact = service.updateContact(id, newContact);
-        return updatedContact.map(ResponseEntity::ok)
+    public ResponseEntity<Contact> updateContact(@PathVariable Long id, @RequestBody Contact newContact) {
+        Optional<Contact> updated = service.updateContact(id, newContact);
+        return updated.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
