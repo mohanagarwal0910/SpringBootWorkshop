@@ -1,10 +1,10 @@
-package com.example.UC3_AddressBookAppSetup;
+package com.example.UC4_AddressBookAppSetup;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Uc3AddressBookAppSetupApplicationTests {
+class Uc4AddressBookAppSetupApplicationTests {
 
 	@Test
 	void contextLoads() {

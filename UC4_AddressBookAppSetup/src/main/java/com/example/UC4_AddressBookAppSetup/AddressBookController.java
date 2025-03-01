@@ -1,4 +1,4 @@
-package com.example.UC3_AddressBookAppSetup;
+package com.example.UC4_AddressBookAppSetup;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
