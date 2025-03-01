@@ -1,32 +1,16 @@
-package com.example.UC2_AddressBookAppSetup;
+package com.example.UC3_AddressBookAppSetup;
 
-import jakarta.persistence.*;
 
-@Entity
-@Table(name = "contacts")
-public class Contact {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class AddressBookDTO {
     private String name;
     private String phone;
     private String email;
     private String address;
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public AddressBookDTO(String name, String phone, String email,String address) {
+        this.name=name;
+        this.phone= phone;
+        this.email= email;
+        this.address= address;
     }
 
     public String getEmail() {
@@ -43,6 +27,14 @@ public class Contact {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
